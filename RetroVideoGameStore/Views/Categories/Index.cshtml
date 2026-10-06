@@ -3,11 +3,12 @@
     ViewData["Title"] = "Categories";
 }
 
-<h1>Pick a video game category to browse our store: </h1>
+<h1>Pick a very cool video game category to browse our store: </h1>
+<p><a asp-controller="Categories" asp-action="Create">Add new Category</a></p>
 <ul>
-@foreach(var category in Model)
+@foreach (var category in Model)
 {
-    <li>@category.Name</li>
+    @*<li>@category.Name</li>*@
     <li><a asp-controller="Categories" asp-action="Browse" asp-route-categoryName="@category.Name">@category.Name</a></li>
 }
 </ul>

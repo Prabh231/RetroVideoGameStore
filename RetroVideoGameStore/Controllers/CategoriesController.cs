@@ -3,7 +3,7 @@ using RetroVideoGameStore.Models;
 
 namespace RetroVideoGameStore.Controllers
 {
-    public class Categories : Controller
+    public class CategoriesController : Controller
     {
         public IActionResult Index()
         {
@@ -12,11 +12,16 @@ namespace RetroVideoGameStore.Controllers
             {
                 categories.Add(new Category { Id = i, Name = "Category " + i });
             }
-            return View();
+            return View(categories);
         }
         public IActionResult Browse(string CategoryName)
         {
             ViewBag.categoryName = CategoryName;
+            return View();
+        }
+        public IActionResult Create()
+        {
+            //display form to add new category
             return View();
         }
     }
