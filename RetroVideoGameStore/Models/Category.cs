@@ -7,6 +7,8 @@ namespace RetroVideoGameStore.Models
         public int Id { get; set; }
         [Required]
         public required string Name { get; set; }
+        public  string? Description { get; set; }
+        public  string? Genre { get; set; }
         public List<Product>? Products { get; set; }
     }
 }
